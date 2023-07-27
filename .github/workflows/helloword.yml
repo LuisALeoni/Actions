@@ -1,21 +1,20 @@
-name: Hola mundo actions GH
+name: Hola mundo Actions GH
 
-
-on:
+on: 
     push:
         branches:
-            -main
+            - main
 
-jobs:
+jobs: 
     hola_mundo:
-        name: Imprimir Hola mundo
-        runs-on: ubuntu-latest
-        steps:
-            - name: Revisar el repo
-            uses: actions/chrckout@v2
+            name: Imrpimir Hola mundo 
+            runs-on: self-hosted
+            steps:
+                - name: Revisar el repo
+                  uses: actions/checkout@v2
 
-            - name: Install Pandas
-            run: pip install pandas
+                - name: Install Pandas
+                run: pip install pandas
 
-            - name: Ejecutar codigo de python
-            run: python app.py
+                - name: Ejecutar codigo de python
+                run: python app.py
