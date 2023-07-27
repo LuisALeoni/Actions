@@ -14,5 +14,8 @@ jobs:
             - name: Revisar el repo
             uses: actions/chrckout@v2
 
+            - name: Install Pandas
+            run: pip install pandas
+
             - name: Ejecutar codigo de python
             run: python app.py
