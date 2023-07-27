@@ -7,14 +7,14 @@ on:
 
 jobs: 
     hola_mundo:
-            name: Imrpimir Hola mundo 
-            runs-on: self-hosted
-            steps:
-                - name: Revisar el repo
-                uses: actions/checkout@v2
+        name: Imrpimir Hola mundo 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Revisar el repo
+              uses: actions/checkout@v2
 
-                - name: install Pandas
-                run: pip install pandas
+            - name: install Pandas
+              run: pip install pandas
 
-                - name: Ejecutar codigo de python
-                run: python app.py
+            - name: Ejecutar codigo de python
+              run: python app.py
